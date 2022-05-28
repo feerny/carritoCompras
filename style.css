@@ -1,0 +1,320 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:  #000000;
+  background-image: linear-gradient(180deg, #ff0003 50%, #7a1212 80%,#000000 100% );
+  background-repeat: no-repeat;
+  
+  
+}
+
+header {
+  background-color: #FFFFFF;
+  background-image: linear-gradient(180deg, #FFFFFF 0%, #000000 50%, #ff0003 100%);  
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Koulen', cursive;
+  color: #ffffff;
+  font-size: 2rem;
+
+  padding: 0;
+}
+
+header h1 span{
+  color: rgb(129, 12, 12);
+  border-left: #000000 solid 5px;
+  border-bottom:#000000 solid 5px;
+}
+
+select {
+  width: 12rem;
+  height: 2rem;  
+  box-shadow: 0 0 40px #460404;
+  border-radius: 9px;
+  border: #FFFFFF solid 2px;
+  background-color: #000000;
+  color: #ffff;
+  cursor: pointer;
+  transition: all .1s ease;
+}
+
+select:hover{
+  cursor: pointer;
+  width: 12rem;
+  height: 2rem;  
+  box-shadow: 0 0 40px #460404;
+  border-radius: 15px;
+  border: #FFFFFF solid 4px;
+  background-color: #000000;
+  color: #ffff;
+  transition: all .1s ease;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-product {
+  margin: 1rem;
+  text-align: center;
+  width: 12rem;
+  height: 25rem;
+  border-radius: 15px;
+  border: solid #ffffff 2px;
+  background-color: #ffffff;
+  background-image: linear-gradient(0deg, #ffffff 0%, #000000 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-product {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  height: 50%;
+}
+
+.name-product {
+  margin-top: 0.8rem;
+  color: #000000;
+  font-family: 'Koulen', cursive;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.price-product {
+  font-family: 'Koulen', cursive;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #580606;
+}
+
+.btn-add {
+  display: block;
+  width: 13rem;
+  height: 2rem;
+  border-radius: 15px;
+  font-family: 'Varela Round', sans-serif;
+  border: solid white 2px;
+  background-color: #000000;
+  color: white;
+  font-size: 1rem;  
+  cursor: pointer;  
+  transition: all .5s ease;
+}
+
+.btn-add:hover {
+  background-color: white;
+  border: black solid 2px;
+  color: rgb(0, 0, 0);
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.contenedor {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+
+}
+
+#btn-create {
+  width: 12rem;
+  height: 2rem;
+  border-radius: 7px;
+  font-family: 'Varela Round', sans-serif;
+  border: none;
+  background-color: #000000;
+  color: white;
+  font-size: 1rem;  
+  cursor: pointer;  
+  transition: all .5s ease;
+}
+
+#btn-create:hover,
+#btn-create:focus {
+  background-color: white;
+  border: black solid 2px;
+  color: rgb(0, 0, 0);
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.modal {
+  transition: all .5s ease;
+  margin-top: 5rem;
+  font-family: 'Varela Round', sans-serif;
+  width: 25rem;
+  height: 25rem;  
+  border-left: #000000 solid 20px;
+  background-color: #4b0b0b;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;  
+  z-index: 1;
+  display: none;
+
+}
+
+.modal > input {
+  border: none;
+  border-bottom: #f1f1f1 solid 3px;
+  width: 20rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #000000;
+  color: #ffff;
+  font-size: 1rem;  
+  transition: all .5s ease;
+}
+
+hr{
+  width: 20rem;
+}
+
+
+.modal input[type="file"] {
+  width: 20rem;
+  height: 2rem;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-bottom: #f1f1f1 solid 3px;
+  border-radius: 5px;  
+  color: #ffff;
+  font-size: 15px;
+
+}
+
+.button2 {
+  width: 12rem;
+  height: 2rem;
+  border-radius: 15px;
+  font-family: 'Varela Round', sans-serif;
+  border: none;
+  background-color: #00000041;
+  color: white;
+  font-size: 1rem;  
+  cursor: pointer;  
+  transition: all .5s ease;
+}
+
+
+.button-add-new{
+  width: 12rem;
+  height: 2rem;
+  border-radius: 15px;
+  font-family: 'Varela Round', sans-serif;
+  border: none;
+  background-color: #000000;
+  color: white;
+  font-size: 1rem;  
+  cursor: pointer;  
+  transition: all .5s ease;
+}
+.button-add-new:hover,
+.button-add-new:focus{
+  background-color: white;
+  border: black solid 2px;
+  color: rgb(0, 0, 0);
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+#close-modal {
+  transition: all .3s ease;
+  margin-left: 20rem;
+  border: none;
+  background-color: red;
+  color: black;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  top: 1rem;
+  right: 1rem;
+}
+
+#close-modal:hover{
+  transition: all .3s ease;
+  margin-left: 20rem;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: red;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid red;
+  top: 1rem;
+  right: 1rem;
+}
+
+
+
+.deleted{
+  transition: all .5s ease;
+  margin-left: 8rem;
+  border: none;
+  background-color: red;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  }
+  
+  .deleted:hover{
+  transition: all .5s ease;
+  margin-left: 8rem;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: red;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid red;
+  }
+
+  .off{
+    display: none;
+  }
+
+  .on{
+    display: block;
+  }
+
+  .contador{
+    padding: 8px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 30px;
+
+  }
+
