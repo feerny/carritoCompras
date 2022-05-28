@@ -181,6 +181,47 @@ main {
 
 }
 
+.buttonbuy{
+  width: 6rem;
+  height: 2rem;
+  border-radius: 7px;
+  font-family: 'Varela Round', sans-serif;
+  border: none;
+  background-color: rgb(93, 224, 17);
+  color: white;
+  font-size: 1rem;  
+  cursor: pointer;  
+  transition: all .5s ease;
+}
+
+.buttonbuy:hover {
+  background-color: #007506;
+  border: none;
+  color: rgb(0, 0, 0);
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.buttoncancel{
+  width: 6rem;
+  height: 2rem;
+  border-radius: 7px;
+  font-family: 'Varela Round', sans-serif;
+  border: none;
+  background-color: rgb(133, 28, 9);
+  color: white;
+  font-size: 1rem;  
+  cursor: pointer;  
+  transition: all .5s ease;
+}
+
+.buttoncancel:hover {
+  background-color: #d80c0c;
+  border: none;
+  color: rgb(0, 0, 0);
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
 .modal > input {
   border: none;
   border-bottom: #f1f1f1 solid 3px;

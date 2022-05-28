@@ -1,5 +1,6 @@
 //constantes
-
+const buy = document.getElementById("buy");
+const cancel = document.getElementById("cancel");
 const CONTENEDOR = document.getElementById('container-cards');
 const selectProd = document.getElementById('select-products');
 const crear = document.getElementById('btn-create');
@@ -55,6 +56,22 @@ function filtro(event) {
   CONTENEDOR.innerHTML = '';
   filtrar.map( game => createCards(game));
 }
+
+
+//al comprar todas las targets se eliminan y el price vuelve a 0
+buy.addEventListener('click',()=>{
+  if (contador.innerHTML!="0") {
+   alert('compra realizada por: '+contador.innerHTML+'USD');
+
+   contador.textContent="0";
+
+   CONTENEDOR.innerHTML='';
+  }else{
+    alert("nos se han agregado productos al carrito!!")
+  }
+ 
+
+ });
 
 
 function importImg(event) {
@@ -187,6 +204,8 @@ function createCards(game) {
 
   });
 
+
+
   
     //al eliminar producto se descuenta del precio a pagar y se activa el boton de close de la target
   btndeleted.addEventListener('click',()=>{
@@ -214,10 +233,16 @@ function createCards(game) {
 
   function borra(){
     carta.remove();
-
-    
-    
-
   }
+
+  //al cancelar la compra todo vuelve a la normalidad pero no se eliminan las target
+  cancel.addEventListener('click',()=>{
+    contador.textContent="0";
+    delet.removeAttribute('disabled');
+    cantProd.removeAttribute('disabled');
+    btndeleted.classList.remove('on');
+    btnAdd.removeAttribute('disabled');
+  });
+
 }
 
