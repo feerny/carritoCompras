@@ -112,6 +112,7 @@ function createCards(game) {
   const btnAdd = document.createElement('button');
   const cantProd = document.createElement('input');
   const btndeleted= document.createElement('button');
+  const span = document.createElement('span');
 
 
   //dar valores
@@ -119,7 +120,10 @@ function createCards(game) {
   btndeleted.classList.add('btn-add');
   btndeleted.classList.add('off');
   btndeleted.textContent = "remove";
+  span.textContent="cantidad";
+  span.classList.add("span");
   cantProd.setAttribute('type',"number");
+  cantProd.setAttribute('class',"cant");
   cantProd.setAttribute('value',1);
   delet.textContent="X";
   delet.classList.add('deleted');
@@ -141,6 +145,7 @@ function createCards(game) {
   carta.appendChild(delet);
   carta.appendChild(imgCard);
   carta.appendChild(nameCard);
+  carta.appendChild(span);
   carta.appendChild(cantProd);
   carta.appendChild(priceCard);
   carta.appendChild(btnAdd);

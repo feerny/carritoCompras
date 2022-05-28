@@ -77,8 +77,8 @@ main {
 .card-product {
   margin: 1rem;
   text-align: center;
-  width: 12rem;
-  height: 25rem;
+  width: 13rem;
+  height: 30rem;
   border-radius: 15px;
   border: solid #ffffff 2px;
   background-color: #ffffff;
@@ -318,3 +318,14 @@ hr{
 
   }
 
+.cant{
+  width: 2rem;
+  text-align: right;
+  border: none;
+  border-bottom: black 3px solid;
+  background-color: rgb(192, 186, 186);
+}
+
+.span{
+  font-family: 'Varela Round', sans-serif;
+}
