@@ -59,6 +59,8 @@ function validacionIMG(){
     validacionURL=1;
   }else if (/.(TIF )$/i.test(newImage.value)) {
     validacionURL=1;
+  }else if (/.(jpeg )$/i.test(newImage.value)) {
+    validacionURL=1;
   }else{
     alert("elija un formato tipo imagen!!");
     validacionURL=2;
