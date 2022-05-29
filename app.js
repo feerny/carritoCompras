@@ -12,6 +12,8 @@ const newImage = document.getElementById('new-image');
 let btnNewProduct = document.getElementById('btn-new-create');
 const filterXPrice = document.getElementById('filterXPrice');
 
+btnNewProduct.setAttribute('disabled',true);
+
 let imgSelected = " ";
 let idProduct = 0
 let idpri = 10;
@@ -81,6 +83,8 @@ function importImg(event) {
 }
 
 function createNewProduct() {
+  btnNewProduct.setAttribute('disabled',true);
+  btnNewProduct.setAttribute('class',"button2");
   idProduct++;
   idpri++;
   const titleProduct = newProduct.value;
@@ -97,6 +101,7 @@ function createNewProduct() {
   document.getElementById("new-product").value='';
   document.getElementById("new-price").value=''; 
   document.getElementById("new-image").value= null;
+
   
 }
 
