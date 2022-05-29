@@ -12,11 +12,16 @@ const newImage = document.getElementById('new-image');
 let btnNewProduct = document.getElementById('btn-new-create');
 const filterXPrice = document.getElementById('filterXPrice');
 
+newImage.addEventListener('change',validacionIMG);
+
 btnNewProduct.setAttribute('disabled',true);
 
+
+//globales
 let imgSelected = " ";
 let idProduct = 0
 let idpri = 10;
+let validacionURL=0;
     
 //asigno valores
 window.addEventListener('load', listSelect);
@@ -27,7 +32,10 @@ newImage.addEventListener('change',importImg);
 closeModal.addEventListener('click',()=>{modal.style.display = 'none';
       newProduct.value='';
       newPrice.value=''; 
-      newImage.value= '';    
+      newImage.value= ''; 
+      btnNewProduct.setAttribute('disabled',true);
+      btnNewProduct.setAttribute('class',"button2");
+
     });
 filterXPrice.addEventListener('change', filtro);
 newProduct.addEventListener('keyup',validacionProd);
@@ -37,12 +45,37 @@ newImage.addEventListener('change',validacionProd);
 
 
 //validacion de datos en inputs
-function validacionProd(){
-  if (newProduct.value!='' && newPrice.value!='' && newImage.value!='') {
-    btnNewProduct.removeAttribute("disabled");
-    btnNewProduct.setAttribute('class',"button-add-new");
+
+function validacionIMG(){
+  if (/.(png)$/i.test(newImage.value)) {
+    validacionURL=1;
+  }else if (/.(jfif)$/i.test(newImage.value)) {
+    validacionURL=1;
+  }else if (/.(jpg)$/i.test(newImage.value)) {
+    validacionURL=1;
+  }else if (/.(GIF)$/i.test(newImage.value)) {
+    validacionURL=1;
+  }else if (/.(BMP)$/i.test(newImage.value)) {
+    validacionURL=1;
+  }else if (/.(TIF )$/i.test(newImage.value)) {
+    validacionURL=1;
+  }else{
+    alert("elija un formato tipo imagen!!");
+    validacionURL=2;
   }
 }
+
+function validacionProd(){
+  if (validacionURL==1) {
+    if (newProduct.value!='' && newPrice.value!='' && newImage.value!='') {
+      btnNewProduct.removeAttribute("disabled");
+      btnNewProduct.setAttribute('class',"button-add-new");
+  }
+}
+}
+
+
+
 
 
 //funciones
