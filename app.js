@@ -181,6 +181,7 @@ function createCards(game) {
   span.classList.add("span");
   cantProd.setAttribute('type',"number");
   cantProd.setAttribute('class',"cant");
+  cantProd.setAttribute('min',"0");
   cantProd.setAttribute('value',1);
   delet.textContent="X";
   delet.classList.add('deleted');
